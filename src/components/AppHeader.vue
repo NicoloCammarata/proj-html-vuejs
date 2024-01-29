@@ -33,17 +33,12 @@ export default {
                         Contact
                     </router-link>
             </li>
-            <div >
-                <img src="../assets/01-102x102.jpg" alt="">
-            </div>
+            
             
         </ul>
     </header>
 </template>
 
 <style lang="scss" scoped>
-img{
-    width: 100px;
-    height: 100px;
-}
+
 </style>
