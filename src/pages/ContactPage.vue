@@ -64,14 +64,14 @@ export default {
 
         </div>
         
-        <div class="container text-white py-1 p-0">
+        <div class="container text-white py-1 my-0 p-0">
             <div class="text-white py-1">
                 Codezeel Web Service Pvt. Ltd.
             </div>
             <div class="text-white-50 py-1">
                 We Possess Within Us Two Minds. So Far I Have Written Only Of The Conscious Mind. I Would Now Like To Introduce You To Your Second Mind, The Hidden And Mysterious Subconscious. Our Subconscious Mind Contains Such Power And Complexity That It Literally Staggers The Imagination.
             </div>
-            <div class="row py-3">
+            <div class="row py-3 justify-content-around">
                 <div class="col-3 border p-0 d-flex align-items-center justify-content-center direttive">
                     <div class="w-25 bg-dark d-flex justify-content-center align-items-center h-100 text-warning">
                         <i class="fa-solid fa-location-dot"></i>
@@ -89,7 +89,7 @@ export default {
                 </div>
                 <div class="col-3 border p-0 d-flex align-items-center justify-content-center direttive">
                     <div class="w-25 bg-dark d-flex justify-content-center align-items-center h-100 text-warning" >
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class="fa-solid fa-phone"></i>
 
                     </div>
                     <div class="w-75 border-start p-3 h-100">
@@ -103,7 +103,7 @@ export default {
                 </div>
                 <div class="col-3 border p-0 d-flex align-items-center justify-content-center direttive">
                     <div class="w-25 bg-dark d-flex justify-content-center align-items-center h-100 text-warning">
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class="fa-solid fa-envelope"></i>
 
                     </div>
                     <div class="w-75 border-start p-3 h-100">
@@ -123,6 +123,11 @@ export default {
 
         </div>
 
+        <a href="" class="up text-white rounded-circle">
+            ^
+
+        </a>
+
         
     </div>
 </template>
@@ -130,6 +135,8 @@ export default {
 <style lang="scss" scoped>
 
 #contact{
+    position: relative;
+
     background-image: url('../assets/body-bg.jpg');
     .container{
         margin-top: 50px;
@@ -139,12 +146,24 @@ export default {
         }
         .direttive{
             height: 150px;
-            margin-left: 50px;
+            margin-left: 25px;
+            margin-bottom: 35px;
             width: 350px;
             a{
                 text-decoration: none;
             }
         }
+    }
+    .up{
+        position: fixed;
+        background-color: rgb(208, 159, 24);
+        display: inline;
+        padding: 25px;
+        bottom: 10px;
+        right: 10px;
+        text-decoration: none;
+        
+
     }
     
 }
