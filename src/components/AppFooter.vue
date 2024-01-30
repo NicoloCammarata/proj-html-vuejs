@@ -68,12 +68,27 @@ export default {
                     </li>
 
                 </ul>
-                <ul class="text-white col-2" v-for="(menu, i) in footerMenu" >
+                <ul class="text-white col-2" >
                     <h4 >
-                        {{ menu.title }}
+                        {{ footerMenu[0].title }}
                     </h4>
-                    <li class="text-white-50"  v-for="(voce, y) in menu.voci">
+                    <li class="text-white-50"  v-for="(voce, y) in footerMenu[0].voci">
                         <router-link class="text-white-50 text-decoration-none link" :to="{ name: 'contact' }">
+                            <span class="">{{  voce }}</span>
+                            </router-link>
+                      
+                    </li>
+                    
+                    
+                
+
+                </ul>
+                <ul class="text-white col-2" >
+                    <h4 >
+                        {{ footerMenu[1].title }}
+                    </h4>
+                    <li class="text-white-50"  v-for="(voce, y) in footerMenu[1].voci">
+                        <router-link class="text-white-50 text-decoration-none link" :to="{ name: 'about' }">
                             <span class="">{{  voce }}</span>
                             </router-link>
                       

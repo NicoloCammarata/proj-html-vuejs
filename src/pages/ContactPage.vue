@@ -2,9 +2,26 @@
 export default {
     data() {
         return {
-
+            
+            name: '',
+            email: '',
+            
+           
+        
         };
-    }
+    },
+    methods:{
+        inputDone(){
+            let risposta = document.getElementById("risposta")
+            console.log(risposta)
+            risposta.classList.toggle('none')
+            
+            
+            
+            
+        
+        },
+    },
 }
 </script>
 
@@ -39,24 +56,38 @@ export default {
                     
                     <div class="my-4">
                         <span class="text-white-50 py-1">Subject</span>
-                        <input class="col-12 text-white bg-dark " type="text">
+                        <input  class="col-12 text-white bg-dark " type="text">
                     </div>
                     <div class="my-4">
                         <span class="text-white-50 py-1">Your Name (required)</span>
-                        <input class="col-12 text-white bg-dark " type="text">
+                        <input v-model="name"  class="col-12 text-white bg-dark " type="text">
+                        
                     </div>
                     <div class="my-4">
                         <span class="text-white-50 py-1">Your Email (required)</span>
-                        <input class="col-12 text-white bg-dark " type="text">
+                        <input v-model="email" class="col-12 text-white bg-dark "  type="text">
                     </div>
                     <div class="my-4">
                         <span class="text-white-50 py-1">Your Message</span>
-                        <input class="col-12 text-white bg-dark message" type="text">
+                        <input  class="col-12 text-white bg-dark message" type="text"> 
                     </div>
 
-                    <button type="button" class="btn btn-secondary">Send</button>
+                    <button @click="inputDone()" type="button" class="btn btn-secondary">Send</button>
+                    
+                    <div class="risp" id="risposta">
+                        <div v-if="this.name.length > 0 && this.email.includes('' + '@' + '')" class="my-4  text-white-50 py-1 ">
+                            Thank you for your message. It has been sent.
+                        </div>
+                    
+                        <div v-else class="my-4  text-white-50 py-1 " >
+                            One or more fields have an error. Please check and try again.
+                        </div>
+                    </div>
 
-                   
+
+                    
+                    
+                    
 
                 </div>
 
@@ -133,6 +164,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.risp{
+    display: none;
+}
+.none{
+    display: block;
+}
 
 #contact{
     position: relative;
